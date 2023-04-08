@@ -1,0 +1,915 @@
+@font-face {
+    font-family: 'Aeonik';
+    src: url(/fonts/Aeonik-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(/fonts/Aeonik-Regular.ttf);
+    font-weight: 350;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(/fonts/Aeonik-Medium.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(/fonts/Aeonik-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Aeonik';
+    src: url(/fonts/Aeonik-Light.ttf);
+    font-weight: 300;
+}
+
+@font-face {
+    src: url(/fonts/sf-pro-text_regular.ttf);
+    font-family: 'SF Pro Text';
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+#main::-webkit-scrollbar {
+    width: 10px;
+}
+
+#main::-webkit-scrollbar-track {
+    background: #fbfbfb;
+
+}
+
+#main::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+#main::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#main #mvtop {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    opacity: .8;
+}
+
+#mvtop ion-icon {
+    cursor: pointer;
+    color: turquoise;
+}
+
+#main #nav {
+    width: 100%;
+    height: 8%;
+    /* background-color: red; */
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#nav h3 {
+    font-family: 'SF Pro Text';
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#nav #left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+#nav #icon {
+    width: 20%;
+    height: 100%;
+    /* background-color: red; */
+    margin-top: 9px;
+    margin-left: -40px;
+}
+
+#nav #icon img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    border-radius: 50%;
+    margin-top: -4px;
+}
+
+#nav #ctr {
+    margin-left: -60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+}
+
+#nav #rt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rt #logSign {
+    width: 200px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #67ECA2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#logSign:hover {
+    cursor: pointer;
+}
+
+#logSign:hover h3 {
+    color: #fff;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.3s;
+}
+
+#page1 {
+    padding-top: 20px;
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(236, 236, 236);
+
+}
+
+#text h2 {
+    text-align: center;
+    font-family: 'SF Pro Text';
+    font-weight: 600;
+}
+
+#text p {
+    text-align: center;
+    line-height: 20px;
+    font-family: 'Aeonik';
+    color: rgba(54, 54, 54, 0.758);
+}
+
+#cards {
+    margin-top: 10px;
+    width: 100%;
+    height: 90vh;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#cards .card {
+    width: 30%;
+    height: 88%;
+    background-color: #fff;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: relative;
+}
+
+.card .image {
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    width: 100%;
+    height: 52%;
+    background-size: cover;
+}
+
+#card1 #img1 {
+    background-image: url('https://images.unsplash.com/photo-1536703219213-0223580c76b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80');
+    background-position: 50% 50%;
+}
+
+#card2 #img2 {
+    background-image: url('/images/img2.jpeg');
+    background-position: center 15%;
+}
+
+#card3 #img3 {
+    background-image: url('/images/img3.jpeg');
+}
+
+.card .text {
+    margin-top: 20px;
+    width: 100%;
+    height: 45%;
+    /* background-color: green; */
+}
+
+.text h2 {
+    font-family: 'Aeonik';
+    text-align: center;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+.text p {
+    margin-top: 15px;
+    font-family: 'Aeonik';
+    width: 85%;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.card .lm {
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: 10%;
+    background-color: black;
+}
+
+.lm h3 {
+    font-family: 'Gilroy';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+}
+
+.lm:hover {
+    cursor: pointer;
+}
+
+.lm:hover h3 {
+    color: transparent;
+    -webkit-text-stroke: 0.5px #fff;
+}
+
+.same {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.455);
+    display: none;
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.same1 {
+    box-shadow: 5px 5px 30px rgb(68, 68, 68);
+    background-color: #ffffff;
+    z-index: 10;
+    position: relative;
+}
+
+.regScreen .reg {
+    width: 40vw;
+    height: 80vh;
+}
+
+.same1 .same3 {
+    margin: -10px 0px 0px 130px;
+}
+
+.same3 h2 {
+    font-family: 'Aeonik';
+    font-weight: 600;
+}
+
+.same1 .same2 {
+    width: 25%;
+    height: 20%;
+}
+
+.same2 img {
+    /* border: 1px solid red; */
+    object-fit: cover;
+    width: 100%;
+}
+
+.same1 .close {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.close ion-icon {
+    cursor: pointer;
+    font-size: 23px;
+}
+
+#details {
+    width: 60%;
+    height: 50%;
+    /* background-color: red; */
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#details .form {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#details input {
+    font-family: 'Aeonik';
+    font-weight: 350;
+    padding: 7px 30px;
+    border: 1px solid black;
+}
+
+#details input:focus {
+    outline: 1.5px solid #6C63FF;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+#details .form ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(95, 95, 95);
+}
+
+#details .form i {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(95, 95, 95);
+}
+
+.reg #signupbtn::before {
+    content: '';
+    position: absolute;
+    bottom: 4%;
+    left: 33%;
+    /* z-index: 0; */
+    width: 30%;
+    height: 35px;
+    background-color: rgb(95, 95, 95);
+    /* margin: 0 auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transform: translate(3px, 3px);
+}
+
+.reg #signupbtn::after {
+    content: 'Register';
+    position: absolute;
+    bottom: 4%;
+    left: 33%;
+    width: 30%;
+    height: 35px;
+    background-color: #67ECA2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Aeonik';
+    font-weight: 400;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#signupbtn:active::after {
+    will-change: transform;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+    transform: translate(3px, 3px);
+}
+
+.logScreen .log {
+    width: 30vw;
+    height: 40vh;
+}
+
+#logdets {
+    width: 60%;
+    height: 30%;
+    margin: 55px auto 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+#logdets form {
+    position: relative;
+}
+
+#logdets input {
+    font-family: 'Aeonik';
+    font-weight: 350;
+    padding: 7px 30px;
+    border: 1px solid black;
+}
+
+#logdets input:focus {
+    outline: 1.5px solid #6C63FF;
+    border: 1px solid transparent;
+    border-radius: 2px;
+}
+
+#logdets form:nth-child(1) ion-icon {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(95, 95, 95);
+}
+
+#logdets form i {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(95, 95, 95);
+}
+
+#details form i {
+    position: absolute;
+    top: 50%;
+    left: 8.5%;
+    transform: translate(-50%, -50%);
+    color: rgb(95, 95, 95);
+}
+
+.eye {
+    /* background-color: red; */
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.eye ion-icon {
+    cursor: pointer;
+    color: rgb(54, 54, 54);
+}
+
+.hide {
+    display: none;
+}
+
+#loginButton {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    background-image: -webkit-linear-gradient(top, #67ECA2, #30ab65);
+    background-image: -moz-linear-gradient(top, #67ECA2, #30ab65);
+    background-image: -ms-linear-gradient(top, #67ECA2, #30ab65);
+    background-image: -o-linear-gradient(top, #67ECA2, #30ab65);
+    background-image: linear-gradient(to bottom, #67ECA2, #30ab65);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: 'Aeonik';
+    color: black;
+    font-size: 15px;
+    padding: 6px 14px 6px 14px;
+    text-decoration: none;
+    border: none;
+}
+
+.text1 h2 {
+    text-align: center;
+    font-family: 'Aeonik';
+}
+
+#loginButton:hover {
+    background: #67ECA2;
+    background-image: -webkit-linear-gradient(top, #67ECA2, #1d9051);
+    background-image: -moz-linear-gradient(top, #67ECA2, #115730);
+    background-image: -ms-linear-gradient(top, #67ECA2, #115730);
+    background-image: -o-linear-gradient(top, #67ECA2, #115730);
+    background-image: linear-gradient(to bottom, #67ECA2, #1b834a);
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    will-change: color;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#newUser {
+    position: absolute;
+    left: 60px;
+    bottom: 25px;
+    font-family: 'Aeonik';
+}
+
+#newUser:hover {
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+    border-bottom: 1px solid #6C63FF;
+}
+
+#textlog {
+    position: absolute;
+    top: 25%;
+    left: -10%;
+}
+
+#password-div {
+    position: relative;
+}
+
+#our-mission {
+    width: 100vw;
+    height: 75vh;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+#our-mission>h2 {
+    position: absolute;
+    top: 12%;
+    left: 38.5%;
+    transform: translate(-50%, -50%);
+    font-family: 'Gilroy';
+    font-size: 25px;
+    color: rgb(33, 193, 229);
+    text-align: center;
+    margin-left: 380px;
+    /* font-weight: 400; */
+}
+
+#m-details {
+    width: 90vw;
+    height: 50vh;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#m-details #m-img {
+    width: 50%;
+    height: 110%;
+    /* background-color: red; */
+}
+
+#m-img video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#m-details #m-content {
+    margin-top: 20px;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+}
+
+#m-content .m-text {
+    width: 90%;
+    height: 25%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.m-text #um {
+    width: 14%;
+    /* height: 70%; */
+}
+
+.m-text .ico {
+    width: 10%;
+    /* height: 70%; */
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ico ion-icon {
+    width: 100%;
+    height: 100%;
+    color: rgb(33, 193, 229);
+}
+
+.ico img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.m-text .mt {
+    width: 70%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.mt h3 {
+    font-family: 'SF Pro Text';
+    text-align: left;
+}
+
+.mt h5 {
+    font-family: 'Aeonik';
+    font-weight: 400;
+}
+
+#notifs {
+    width: 100vw;
+    height: 240vh;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+}
+
+#notifs .initial-state {
+    width: 60vw;
+    height: 15vh;
+    border-radius: 20px;
+    background-color: rgb(228, 214, 17);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
+    cursor: pointer;
+}
+
+.initial-state .user-name {
+    width: 120px;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.initial-state h3 {
+    font-family: 'Aeonik';
+    font-weight: 400;
+    opacity: 0.5;
+}
+
+.user-address h4 {
+    font-family: 'Aeonik';
+    font-weight: 400;
+    display: none;
+}
+
+.initial-state .ce-button {
+    /* background-color: red; */
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.ce-button ion-icon {
+    font-size: 35px;
+}
+
+.user-dets {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.initial-state h2 {
+    font-family: 'SF Pro Text';
+}
+
+.initial-state .food-catg {
+    width: 10%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: .3em;
+}
+
+.food-catg h4 {
+    opacity: 0;
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    font-family: 'Aeonik';
+    margin-left: 10px;
+    font-weight: 400;
+}
+
+.food-catg .catg-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.catg-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.catg-wet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.qty-desc {
+    /* background-color: red; */
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.qty-desc .item-desc {
+    width: 100%;
+    height: 50%;
+    /* background-color: red; */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.item-desc h5 {
+    font-family: 'Aeonik';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.item-desc {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* .user-location {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.user-location .user-add {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+} */
+
+#notifs #filter {
+    position: relative;
+    overflow-x: auto;
+    width: 60vw;
+    height: 10vh;
+    /* background-color: #fff;
+    border: 1px solid gray; */
+    /* border-radius: ; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#filter .inputs {
+    flex-shrink: 0;
+    width: 65px;
+    height: 32px;
+    border-radius: 5px;
+    border: 1px solid rgb(221, 213, 204);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.inputs h3 {
+    font-family: 'Aeonik';
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#filter .cooked-input {
+    width: 90px;
+}
+
+#filter .eatable-input {
+    width: 95px;
+}
+
+#filter .rotten-input {
+    width: 90px;
+}
+
+#filter .veg-input {
+    width: 110px;
+}
+
+#filter .nv-input {
+    width: 140px;   
+}
+
+#filter .inputs:active {
+    border: 1px solid rgb(167, 167, 167);
+}
