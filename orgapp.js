@@ -8,7 +8,7 @@ const app = express();
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
-
+require("dotenv").config({path:"./config/.env"})
 
 app.get("/", function (req, res) {
     //    res.sendFile(__dirname + "/indexorg.ejs");
@@ -24,6 +24,6 @@ app.get("/", function (req, res) {
         })
         .catch((err) => console.log(err))
 });
-app.listen(5000, function () {
+app.listen(process.env.PORT, function () {
     console.log("Server is running on 4000");
 });
