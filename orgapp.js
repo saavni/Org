@@ -20,7 +20,7 @@ app.get("/", function (req, res) {
                 arr.push(Object.values(response.data)[i]);
             }
             const fulldata = JSON.stringify(response.data["-N9wSTmE29zYrjn6V6Io"].description);
-            res.render("list", { data: arr });
+            res.render("index", { data: arr });
         })
         .catch((err) => console.log(err))
 });
